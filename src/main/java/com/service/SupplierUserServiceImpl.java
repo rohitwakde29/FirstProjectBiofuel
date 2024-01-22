@@ -14,19 +14,19 @@ public class SupplierUserServiceImpl implements SupplierUserServiceInterface{
 
 	@Override
 	public SupplierUser RegisterSuppUser(SupplierUser supplieruser) {
-		
+		// TODO Auto-generated method stub
 		return supplierUserRepo.save(supplieruser);
 	}
 
 	@Override
-	public SupplierUser FindBySuppemailid(String suppEmailId) {
-		
-		return supplierUserRepo.findBySuppEmailId(suppEmailId);
+	public SupplierUser FindBySuppemailid(String suppemailid) {
+		// TODO Auto-generated method stub
+		return supplierUserRepo.findBySuppemailid(suppemailid);
 	}
 
 	@Override
-	public SupplierUser FindBySuppemailidAndSupppassword(String suppEmailId, String suppPassword) {
-		
-		return supplierUserRepo.findBySuppEmailIdAndSuppPassword(suppEmailId, suppPassword);
+	public SupplierUser FindBySuppemailidAndSupppassword(String suppemailid, String supppassword) {
+		// TODO Auto-generated method stub
+		return supplierUserRepo.findBySuppemailidAndSupppassword(suppemailid,supppassword);
 	}
 }

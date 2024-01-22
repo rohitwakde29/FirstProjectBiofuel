@@ -6,7 +6,7 @@ public interface UserServiceInterface {
 
 	public User RegisterUser(User user);
 
-	public User FindByEmailid(String emailId);
+	public User FindByEmailid(String emailid);
 	
-	public User FindByEmailidAndPassword(String emailId,String password);
+	public User FindByEmailidAndPassword(String emailid,String password);
 }

@@ -15,20 +15,20 @@ public class DistributorUserServiceImpl implements DistributorUserServiceInterfa
 	
 	@Override
 	public DistributorUser RegisterDistUser(DistributorUser distributoruser) {
-		
+		// TODO Auto-generated method stub
 		return distributorUserRepo.save(distributoruser);
 	}
 
 	@Override
-	public DistributorUser FindByDistemailid(String distEmailId) {
-		
-		return distributorUserRepo.findByDistEmailId(distEmailId);
+	public DistributorUser FindByDistemailid(String distemailid) {
+		// TODO Auto-generated method stub
+		return distributorUserRepo.findByDistemailid(distemailid);
 	}
 
 	@Override
-	public DistributorUser FindByDistemailidAndDistpassword(String distEmailId, String distPassword) {
-	
-		return distributorUserRepo.findByDistEmailIdAndDistPassword(distEmailId, distPassword);
+	public DistributorUser FindByDistemailidAndDistpassword(String distemailid, String distpassword) {
+		// TODO Auto-generated method stub
+		return distributorUserRepo.findByDistemailidAndDistpassword(distemailid,distpassword);
 	}
 
 }

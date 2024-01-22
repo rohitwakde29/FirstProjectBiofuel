@@ -6,8 +6,9 @@ import com.model.DistributorUser;
 
 public interface DistributorUserRepository extends JpaRepository<DistributorUser , Integer> {
 
-	DistributorUser findByDistEmailId(String distEmailId);
 
-	DistributorUser findByDistEmailIdAndDistPassword(String distEmailId, String distPassword);
-	
+	DistributorUser findByDistemailid(String distemailid);
+
+	DistributorUser findByDistemailidAndDistpassword(String distemailid, String distpassword);
+
 }

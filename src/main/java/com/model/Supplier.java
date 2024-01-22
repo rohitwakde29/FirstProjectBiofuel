@@ -2,6 +2,7 @@ package com.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,7 +17,9 @@ public class Supplier {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long supplierId;
     private String supplierName;
-    private int quantity;
+    
+    @Column(nullable = false)
+    private int quantity=0;
     private String email;
     private String phoneNo;
     
@@ -86,7 +89,5 @@ public class Supplier {
 		this.rawmaterial = rawmaterial;
 	}
 
-	
-	
 	
 }

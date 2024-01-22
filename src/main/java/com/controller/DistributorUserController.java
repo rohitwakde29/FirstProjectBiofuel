@@ -11,16 +11,20 @@ import com.model.DistributorUser;
 import com.service.DistributorUserServiceInterface;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins="http://localhost:4200")
 @RequestMapping("/distributorsLogin")
 public class DistributorUserController {
 	
 	@Autowired
 	DistributorUserServiceInterface distributorUserServ;
 	
-public DistributorUser RegisterDistUser(@RequestBody DistributorUser distributoruser) throws Exception {
+	
+	@PostMapping("/distRegister")
+	@CrossOrigin(origins = "http://localhost:4200/")
+
+	public DistributorUser RegisterDistUser(@RequestBody DistributorUser distributoruser) throws Exception {
 		
-		String Temp=distributoruser.getDistEmailId();
+		String Temp=distributoruser.getDistemailid();
 		if(Temp!=null && !"" .equals(Temp))
 		{
 			DistributorUser obj=distributorUserServ.FindByDistemailid(Temp);
@@ -38,11 +42,11 @@ public DistributorUser RegisterDistUser(@RequestBody DistributorUser distributor
 	
 	
 	@PostMapping("/distLogin")
-	
+	@CrossOrigin(origins = "http://localhost:4200/")
 	public DistributorUser FindByDistEmailidAndDistPassword(@RequestBody DistributorUser distributoruser) throws Exception {
 	
-		String TempEmail=distributoruser.getDistEmailId();
-		String TempPass=distributoruser.getDistPassword();
+		String TempEmail=distributoruser.getDistemailid();
+		String TempPass=distributoruser.getDistpassword();
 		
 		DistributorUser userobj=null;
 		if(TempEmail!=null && TempPass!=null)

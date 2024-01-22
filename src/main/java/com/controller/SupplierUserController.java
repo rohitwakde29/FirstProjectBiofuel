@@ -11,7 +11,7 @@ import com.model.SupplierUser;
 import com.service.SupplierUserServiceInterface;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+
 @RequestMapping("/suppliersLogin")
 public class SupplierUserController {
 	
@@ -19,10 +19,11 @@ public class SupplierUserController {
 	SupplierUserServiceInterface supplierUserServ;
 	
 	@PostMapping("/suppRegister")
-	
+	@CrossOrigin(origins = "http://localhost:4200/")
+
 	public SupplierUser RegisterSuppUser(@RequestBody SupplierUser supplieruser) throws Exception {
 		
-		String Temp=supplieruser.getSuppEmailId();
+		String Temp=supplieruser.getSuppemailid();
 		if(Temp!=null && !"" .equals(Temp))
 		{
 			SupplierUser obj=supplierUserServ.FindBySuppemailid(Temp);
@@ -38,16 +39,13 @@ public class SupplierUserController {
 	}
 	
 	
-	
-	
-	
-	
-	@PostMapping("/suppLogin")
 
+	@PostMapping("/suppLogin")
+	@CrossOrigin(origins = "http://localhost:4200/")
 	public SupplierUser FindBySuppEmailidAndSuppPassword(@RequestBody SupplierUser supplieruser) throws Exception {
 	
-		String TempEmail=supplieruser.getSuppEmailId();
-		String TempPass=supplieruser.getSuppPassword();
+		String TempEmail=supplieruser.getSuppemailid();
+		String TempPass=supplieruser.getSupppassword();
 		
 		SupplierUser userobj=null;
 		if(TempEmail!=null && TempPass!=null)
@@ -62,5 +60,4 @@ public class SupplierUserController {
 		return userobj;
 	}
 	
-
 }

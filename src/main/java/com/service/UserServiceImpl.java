@@ -15,21 +15,20 @@ public class UserServiceImpl  implements UserServiceInterface{
 	
 	@Override
 	public User RegisterUser(User user) {
-		
+		// TODO Auto-generated method stub
 		return userRepo.save(user);
 	}
 
 	@Override
-	public User FindByEmailid(String emailId) {
-		
-		return userRepo.findByEmailId(emailId);
+	public User FindByEmailid(String emailid) {
+		// TODO Auto-generated method stub
+		return userRepo.findByEmailid(emailid);
 	}
 
 	@Override
-	public User FindByEmailidAndPassword(String emailId, String password) {
-		
-		return userRepo.findByEmailIdAndPassword(emailId, password);
+	public User FindByEmailidAndPassword(String emailid, String password) {
+		// TODO Auto-generated method stub
+		return userRepo.findByEmailidAndPassword(emailid, password);
 	}
-
 
 }

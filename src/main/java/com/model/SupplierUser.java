@@ -10,46 +10,63 @@ public class SupplierUser {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int suppId;
+	int suppid;
 	
-	private String suppEmailId;
-	private String suppName;
-	private String suppPassword;
+	String suppemailid;
+	String suppname;
+	String supppassword;
+
 	public SupplierUser() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public SupplierUser(int suppId, String suppEmailId, String suppName, String suppPassword) {
-		super();
-		this.suppId = suppId;
-		this.suppEmailId = suppEmailId;
-		this.suppName = suppName;
-		this.suppPassword = suppPassword;
-	}
-	public int getSuppId() {
-		return suppId;
-	}
-	public void setSuppId(int suppId) {
-		this.suppId = suppId;
-	}
-	public String getSuppEmailId() {
-		return suppEmailId;
-	}
-	public void setSuppEmailId(String suppEmailId) {
-		this.suppEmailId = suppEmailId;
-	}
-	public String getSuppName() {
-		return suppName;
-	}
-	public void setSuppName(String suppName) {
-		this.suppName = suppName;
-	}
-	public String getSuppPassword() {
-		return suppPassword;
-	}
-	public void setSuppPassword(String suppPassword) {
-		this.suppPassword = suppPassword;
-	}
-	
-	
 
+	public SupplierUser(int suppid, String suppemailid, String suppname, String supppassword) {
+		super();
+		this.suppid = suppid;
+		this.suppemailid = suppemailid;
+		this.suppname = suppname;
+		this.supppassword = supppassword;
+	}
+
+	public int getSuppid() {
+		return suppid;
+	}
+
+	public void setSuppid(int suppid) {
+		this.suppid = suppid;
+	}
+
+	public String getSuppemailid() {
+		return suppemailid;
+	}
+
+	public void setSuppemailid(String suppemailid) {
+		this.suppemailid = suppemailid;
+	}
+
+	public String getSuppname() {
+		return suppname;
+	}
+
+	public void setSuppname(String suppname) {
+		this.suppname = suppname;
+	}
+
+	public String getSupppassword() {
+		return supppassword;
+	}
+
+	public void setSupppassword(String supppassword) {
+		this.supppassword = supppassword;
+	}
+
+	@Override
+	public String toString() {
+		return "SupplierLogin [suppid=" + suppid + ", suppemailid=" + suppemailid + ", suppname=" + suppname
+				+ ", supppassword=" + supppassword + "]";
+	}
+	
+	
+	
 }

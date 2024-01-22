@@ -12,57 +12,50 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	
-	private String emailId;
-    private	String username;
-	private String password;
+	String emailid;
+	String username;
+	String password;
+	
 	
 	public User() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-
-	public User(int id, String emailId, String username, String password) {
+	public User(int id, String emailid, String username, String password) {
 		super();
 		this.id = id;
-		this.emailId = emailId;
+		this.emailid = emailid;
 		this.username = username;
 		this.password = password;
 	}
-
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	public String getEmailId() {
-		return emailId;
+	public String getEmailid() {
+		return emailid;
 	}
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
 	}
-
 	public String getUsername() {
 		return username;
 	}
-
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
-	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", emailid=" + emailid + ", username=" + username + ", password=" + password + "]";
+	}
 	
 	
 }

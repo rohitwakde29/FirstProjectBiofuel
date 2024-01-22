@@ -5,8 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.model.SupplierUser;
 
 public interface SupplierUserRepository extends JpaRepository<SupplierUser , Integer> {
+	SupplierUser findBySuppemailid(String suppemailid);
 
-	SupplierUser findBySuppEmailId(String suppEmailId);
+	SupplierUser findBySuppemailidAndSupppassword(String suppemailid, String supppassword);
 
-	SupplierUser findBySuppEmailIdAndSuppPassword(String suppEmailId, String suppPassword);
+	
 }

@@ -10,45 +10,64 @@ public class DistributorUser {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int distId;
+	int distid;
 	
-	String distEmailId;
-	String distName;
-	String distPassword;
+	String distemailid;
+	String distname;
+	String distpassword;
+	
 	public DistributorUser() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public DistributorUser(int distId, String distEmailId, String distName, String distPassword) {
+
+	public DistributorUser(int distid, String distemailid, String distname, String distpassword) {
 		super();
-		this.distId = distId;
-		this.distEmailId = distEmailId;
-		this.distName = distName;
-		this.distPassword = distPassword;
+		this.distid = distid;
+		this.distemailid = distemailid;
+		this.distname = distname;
+		this.distpassword = distpassword;
 	}
-	public int getDistId() {
-		return distId;
+
+	public int getDistid() {
+		return distid;
 	}
-	public void setDistId(int distId) {
-		this.distId = distId;
+
+	public void setDistid(int distid) {
+		this.distid = distid;
 	}
-	public String getDistEmailId() {
-		return distEmailId;
+
+	public String getDistemailid() {
+		return distemailid;
 	}
-	public void setDistEmailId(String distEmailId) {
-		this.distEmailId = distEmailId;
+
+	public void setDistemailid(String distemailid) {
+		this.distemailid = distemailid;
 	}
-	public String getDistName() {
-		return distName;
+
+	public String getDistname() {
+		return distname;
 	}
-	public void setDistName(String distName) {
-		this.distName = distName;
+
+	public void setDistname(String distname) {
+		this.distname = distname;
 	}
-	public String getDistPassword() {
-		return distPassword;
+
+	public String getDistpassword() {
+		return distpassword;
 	}
-	public void setDistPassword(String distPassword) {
-		this.distPassword = distPassword;
+
+	public void setDistpassword(String distpassword) {
+		this.distpassword = distpassword;
 	}
+
+	@Override
+	public String toString() {
+		return "DistributorUser [distid=" + distid + ", distemailid=" + distemailid + ", distname=" + distname
+				+ ", distpassword=" + distpassword + "]";
+	}
+	
+	
 	
 	
 }

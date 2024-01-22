@@ -4,9 +4,12 @@ import com.model.DistributorUser;
 
 public interface DistributorUserServiceInterface {
 
+	
 public DistributorUser RegisterDistUser(DistributorUser distributoruser);
 	
-	public DistributorUser FindByDistemailid(String distEmailId);
+	public DistributorUser FindByDistemailid(String distemailid);
 	
-	public DistributorUser FindByDistemailidAndDistpassword(String distEmailId,String distPassword);
+	public DistributorUser FindByDistemailidAndDistpassword(String distemailid,String distpassword);
+
 }
+
